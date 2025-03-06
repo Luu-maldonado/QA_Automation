@@ -1,0 +1,262 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\playwright.config.ts",
+    "rootDir": "C:/Users/lucim/Documents/GitHub/QA_Automation/test",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 3
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/lucim/Documents/GitHub/QA_Automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/lucim/Documents/GitHub/QA_Automation/test",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/lucim/Documents/GitHub/QA_Automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/lucim/Documents/GitHub/QA_Automation/test",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/lucim/Documents/GitHub/QA_Automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/Users/lucim/Documents/GitHub/QA_Automation/test",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.50.1",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "widgets.test.ts",
+      "file": "widgets.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Interacción con Widgets en DemoQA",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "timedOut",
+                  "duration": 63332,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\pages\\WidgetsPage.ts",
+                        "column": 62,
+                        "line": 27
+                      },
+                      "message": "Error: locator.click: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#datePickerMonthYearInput')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\WidgetsPage.ts:27\n\n\u001b[0m \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36masync\u001b[39m selectDate(date\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m\"#datePickerMonthYearInput\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m\".react-datepicker\"\u001b[39m\u001b[33m,\u001b[39m { state\u001b[33m:\u001b[39m \u001b[32m\"visible\"\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m5000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mconst\u001b[39m [day\u001b[33m,\u001b[39m month\u001b[33m,\u001b[39m year] \u001b[33m=\u001b[39m date\u001b[33m.\u001b[39msplit(\u001b[32m\"/\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m\".react-datepicker__year-select\"\u001b[39m)\u001b[33m.\u001b[39mselectOption(year)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at WidgetsPage.selectDate (C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\pages\\WidgetsPage.ts:27:62)\u001b[22m\n\u001b[2m    at C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\test\\widgets.test.ts:10:23\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-03-06T13:14:51.577Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\test-results\\widgets-Interacción-con-Widgets-en-DemoQA-chromium\\test-failed-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "525a68316d9d9ad66493-c7eb1190345c6665bb7b",
+          "file": "widgets.test.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "Interacción con Widgets en DemoQA",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "timedOut",
+                  "duration": 60362,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\pages\\WidgetsPage.ts",
+                        "column": 62,
+                        "line": 27
+                      },
+                      "message": "Error: locator.click: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#datePickerMonthYearInput')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\WidgetsPage.ts:27\n\n\u001b[0m \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36masync\u001b[39m selectDate(date\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m\"#datePickerMonthYearInput\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m\".react-datepicker\"\u001b[39m\u001b[33m,\u001b[39m { state\u001b[33m:\u001b[39m \u001b[32m\"visible\"\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m5000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mconst\u001b[39m [day\u001b[33m,\u001b[39m month\u001b[33m,\u001b[39m year] \u001b[33m=\u001b[39m date\u001b[33m.\u001b[39msplit(\u001b[32m\"/\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m\".react-datepicker__year-select\"\u001b[39m)\u001b[33m.\u001b[39mselectOption(year)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at WidgetsPage.selectDate (C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\pages\\WidgetsPage.ts:27:62)\u001b[22m\n\u001b[2m    at C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\test\\widgets.test.ts:10:23\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-03-06T13:14:51.578Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\test-results\\widgets-Interacción-con-Widgets-en-DemoQA-firefox\\test-failed-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "525a68316d9d9ad66493-913335859eeee4721bfe",
+          "file": "widgets.test.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "Interacción con Widgets en DemoQA",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "timedOut",
+                  "duration": 65041,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\pages\\WidgetsPage.ts",
+                        "column": 25,
+                        "line": 23
+                      },
+                      "message": "Error: page.goto: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://demoqa.com/widgets\", waiting until \"load\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\WidgetsPage.ts:23\n\n\u001b[0m \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[36masync\u001b[39m navigate() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m\"/widgets\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m     }\n \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36masync\u001b[39m selectDate(date\u001b[33m:\u001b[39m string) {\u001b[0m\n\u001b[2m    at WidgetsPage.navigate (C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\pages\\WidgetsPage.ts:23:25)\u001b[22m\n\u001b[2m    at C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\test\\widgets.test.ts:7:23\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-03-06T13:14:51.595Z",
+                  "attachments": []
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "525a68316d9d9ad66493-31c9938158b55e96e1c7",
+          "file": "widgets.test.ts",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-03-06T13:14:50.889Z",
+    "duration": 65864.609,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}
