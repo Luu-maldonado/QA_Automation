@@ -5,9 +5,9 @@
 4 silly config load:file:C:\Users\lucim\Documents\GitHub\QA_Automation\.npmrc
 5 silly config load:file:C:\Users\lucim\.npmrc
 6 silly config load:file:C:\Users\lucim\AppData\Roaming\npm\etc\npmrc
-7 verbose title npm exec playwright test test/tables.test.ts
-8 verbose argv "exec" "--" "playwright" "test" "test/tables.test.ts"
-9 verbose logfile logs-max:10 dir:C:\Users\lucim\Documents\GitHub\QA_Automation\tmpnpm-cache\_logs\2025-03-06T12_54_04_489Z-
-10 verbose logfile C:\Users\lucim\Documents\GitHub\QA_Automation\tmpnpm-cache\_logs\2025-03-06T12_54_04_489Z-debug-0.log
+7 verbose title npm exec playwright show-report
+8 verbose argv "exec" "--" "playwright" "show-report"
+9 verbose logfile logs-max:10 dir:C:\Users\lucim\Documents\GitHub\QA_Automation\tmpnpm-cache\_logs\2025-03-10T13_30_41_338Z-
+10 verbose logfile C:\Users\lucim\Documents\GitHub\QA_Automation\tmpnpm-cache\_logs\2025-03-10T13_30_41_338Z-debug-0.log
 11 silly logfile start cleaning logs, removing 1 files
 12 silly logfile done cleaning log files

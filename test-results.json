@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 3
+      "actualWorkers": 4
     },
     "preserveOutput": "always",
     "reporter": [
@@ -61,20 +61,6 @@
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
         "timeout": 60000
-      },
-      {
-        "outputDir": "C:/Users/lucim/Documents/GitHub/QA_Automation/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "metadata": {},
-        "id": "webkit",
-        "name": "webkit",
-        "testDir": "C:/Users/lucim/Documents/GitHub/QA_Automation/test",
-        "testIgnore": [],
-        "testMatch": [
-          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
-        ],
-        "timeout": 60000
       }
     ],
     "shard": null,
@@ -86,13 +72,13 @@
   },
   "suites": [
     {
-      "title": "widgets.test.ts",
-      "file": "widgets.test.ts",
+      "title": "bookstore.test.ts",
+      "file": "bookstore.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Interacción con Widgets en DemoQA",
+          "title": "Buscar y agregar un libro a la colección",
           "ok": false,
           "tags": [],
           "tests": [
@@ -106,7 +92,7 @@
                 {
                   "workerIndex": 0,
                   "status": "timedOut",
-                  "duration": 63332,
+                  "duration": 60220,
                   "error": {
                     "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
@@ -117,22 +103,22 @@
                     },
                     {
                       "location": {
-                        "file": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\pages\\WidgetsPage.ts",
-                        "column": 62,
-                        "line": 27
+                        "file": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\pages\\BookstorePage.ts",
+                        "column": 30,
+                        "line": 29
                       },
-                      "message": "Error: locator.click: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#datePickerMonthYearInput')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\WidgetsPage.ts:27\n\n\u001b[0m \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36masync\u001b[39m selectDate(date\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m\"#datePickerMonthYearInput\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m\".react-datepicker\"\u001b[39m\u001b[33m,\u001b[39m { state\u001b[33m:\u001b[39m \u001b[32m\"visible\"\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m5000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mconst\u001b[39m [day\u001b[33m,\u001b[39m month\u001b[33m,\u001b[39m year] \u001b[33m=\u001b[39m date\u001b[33m.\u001b[39msplit(\u001b[32m\"/\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m\".react-datepicker__year-select\"\u001b[39m)\u001b[33m.\u001b[39mselectOption(year)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at WidgetsPage.selectDate (C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\pages\\WidgetsPage.ts:27:62)\u001b[22m\n\u001b[2m    at C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\test\\widgets.test.ts:10:23\u001b[22m"
+                      "message": "Error: locator.click: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=\\'Add To Your Collection\\'')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\BookstorePage.ts:29\n\n\u001b[0m \u001b[90m 27 |\u001b[39m\n \u001b[90m 28 |\u001b[39m     \u001b[36masync\u001b[39m addBookToCollection() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 30 |\u001b[39m     }\n \u001b[90m 31 |\u001b[39m\n \u001b[90m 32 |\u001b[39m     \u001b[36masync\u001b[39m validateBookInProfile() {\u001b[0m\n\u001b[2m    at BookStorePage.addBookToCollection (C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\pages\\BookstorePage.ts:29:30)\u001b[22m\n\u001b[2m    at C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\test\\bookstore.test.ts:13:25\u001b[22m"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-03-06T13:14:51.577Z",
+                  "startTime": "2025-03-10T13:42:21.172Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\test-results\\widgets-Interacción-con-Widgets-en-DemoQA-chromium\\test-failed-1.png"
+                      "path": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\test-results\\bookstore-Buscar-y-agregar-un-libro-a-la-colección-chromium\\test-failed-1.png"
                     }
                   ]
                 }
@@ -140,13 +126,13 @@
               "status": "unexpected"
             }
           ],
-          "id": "525a68316d9d9ad66493-c7eb1190345c6665bb7b",
-          "file": "widgets.test.ts",
+          "id": "8d4d05fc6fd90f928cb3-ffef41c9dfa8938567d3",
+          "file": "bookstore.test.ts",
           "line": 4,
           "column": 5
         },
         {
-          "title": "Interacción con Widgets en DemoQA",
+          "title": "Buscar y agregar un libro a la colección",
           "ok": false,
           "tags": [],
           "tests": [
@@ -158,9 +144,9 @@
               "projectName": "firefox",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 4,
                   "status": "timedOut",
-                  "duration": 60362,
+                  "duration": 60196,
                   "error": {
                     "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
@@ -171,22 +157,22 @@
                     },
                     {
                       "location": {
-                        "file": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\pages\\WidgetsPage.ts",
-                        "column": 62,
-                        "line": 27
+                        "file": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\pages\\BookstorePage.ts",
+                        "column": 25,
+                        "line": 21
                       },
-                      "message": "Error: locator.click: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#datePickerMonthYearInput')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\WidgetsPage.ts:27\n\n\u001b[0m \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36masync\u001b[39m selectDate(date\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m\"#datePickerMonthYearInput\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m\".react-datepicker\"\u001b[39m\u001b[33m,\u001b[39m { state\u001b[33m:\u001b[39m \u001b[32m\"visible\"\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m5000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mconst\u001b[39m [day\u001b[33m,\u001b[39m month\u001b[33m,\u001b[39m year] \u001b[33m=\u001b[39m date\u001b[33m.\u001b[39msplit(\u001b[32m\"/\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m\".react-datepicker__year-select\"\u001b[39m)\u001b[33m.\u001b[39mselectOption(year)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at WidgetsPage.selectDate (C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\pages\\WidgetsPage.ts:27:62)\u001b[22m\n\u001b[2m    at C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\test\\widgets.test.ts:10:23\u001b[22m"
+                      "message": "Error: page.goto: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://demoqa.com/books\", waiting until \"load\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\BookstorePage.ts:21\n\n\u001b[0m \u001b[90m 19 |\u001b[39m\n \u001b[90m 20 |\u001b[39m     \u001b[36masync\u001b[39m navigate() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m\"/books\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 22 |\u001b[39m     }\n \u001b[90m 23 |\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36masync\u001b[39m searchBook(bookName\u001b[33m:\u001b[39m string) {\u001b[0m\n\u001b[2m    at BookStorePage.navigate (C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\pages\\BookstorePage.ts:21:25)\u001b[22m\n\u001b[2m    at C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\test\\bookstore.test.ts:7:25\u001b[22m"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-03-06T13:14:51.578Z",
+                  "startTime": "2025-03-10T13:42:39.663Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\test-results\\widgets-Interacción-con-Widgets-en-DemoQA-firefox\\test-failed-1.png"
+                      "path": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\test-results\\bookstore-Buscar-y-agregar-un-libro-a-la-colección-firefox\\test-failed-1.png"
                     }
                   ]
                 }
@@ -194,13 +180,59 @@
               "status": "unexpected"
             }
           ],
-          "id": "525a68316d9d9ad66493-913335859eeee4721bfe",
-          "file": "widgets.test.ts",
+          "id": "8d4d05fc6fd90f928cb3-16dc9ac7e1be797b8cd3",
+          "file": "bookstore.test.ts",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "forms.test.ts",
+      "file": "forms.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Registro exitoso en formulario de DemoQA",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 15581,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-03-10T13:42:21.180Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\test-results\\forms-Registro-exitoso-en-formulario-de-DemoQA-chromium\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0baad673b583a31dda7c-fc3713212ab3556f7d69",
+          "file": "forms.test.ts",
           "line": 4,
           "column": 5
         },
         {
-          "title": "Interacción con Widgets en DemoQA",
+          "title": "Registro exitoso en formulario de DemoQA",
           "ok": false,
           "tags": [],
           "tests": [
@@ -208,13 +240,13 @@
               "timeout": 60000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
+              "projectId": "firefox",
+              "projectName": "firefox",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 5,
                   "status": "timedOut",
-                  "duration": 65041,
+                  "duration": 60229,
                   "error": {
                     "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
@@ -225,24 +257,282 @@
                     },
                     {
                       "location": {
-                        "file": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\pages\\WidgetsPage.ts",
-                        "column": 25,
-                        "line": 23
+                        "file": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\pages\\FormsPage.ts",
+                        "column": 35,
+                        "line": 37
                       },
-                      "message": "Error: page.goto: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://demoqa.com/widgets\", waiting until \"load\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\WidgetsPage.ts:23\n\n\u001b[0m \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[36masync\u001b[39m navigate() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m\"/widgets\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m     }\n \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36masync\u001b[39m selectDate(date\u001b[33m:\u001b[39m string) {\u001b[0m\n\u001b[2m    at WidgetsPage.navigate (C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\pages\\WidgetsPage.ts:23:25)\u001b[22m\n\u001b[2m    at C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\test\\widgets.test.ts:7:23\u001b[22m"
+                      "message": "Error: locator.check: Target page, context or browser has been closed\n\n\u001b[90m   at \u001b[39m..\\pages\\FormsPage.ts:37\n\n\u001b[0m \u001b[90m 35 |\u001b[39m             } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 36 |\u001b[39m                 \u001b[90m// Si falla, hacer check en el radio button con force:true\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 37 |\u001b[39m                 \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mgender\u001b[33m.\u001b[39mcheck({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 38 |\u001b[39m             }\n \u001b[90m 39 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mphone\u001b[33m.\u001b[39mfill(\u001b[32m\"1234567890\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 40 |\u001b[39m     }\u001b[0m\n\u001b[2m    at FormsPage.fillForm (C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\pages\\FormsPage.ts:37:35)\u001b[22m\n\u001b[2m    at C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\test\\forms.test.ts:8:5\u001b[22m"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-03-06T13:14:51.595Z",
-                  "attachments": []
+                  "startTime": "2025-03-10T13:43:00.299Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\test-results\\forms-Registro-exitoso-en-formulario-de-DemoQA-firefox\\test-failed-1.png"
+                    }
+                  ]
                 }
               ],
               "status": "unexpected"
             }
           ],
-          "id": "525a68316d9d9ad66493-31c9938158b55e96e1c7",
+          "id": "0baad673b583a31dda7c-4b8e50009ec40d4ef65d",
+          "file": "forms.test.ts",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "login.test.ts",
+      "file": "login.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Login exitoso en DemoQA",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 17150,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-03-10T13:42:21.201Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\test-results\\login-Login-exitoso-en-DemoQA-chromium\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "12975f3ff1f884ffbbdd-4209ac85ba294e9755a5",
+          "file": "login.test.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "Login exitoso en DemoQA",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "status": "passed",
+                  "duration": 23024,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-03-10T13:43:20.808Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\test-results\\login-Login-exitoso-en-DemoQA-firefox\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "12975f3ff1f884ffbbdd-64bbb152c29774fd200a",
+          "file": "login.test.ts",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tables.test.ts",
+      "file": "tables.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Agregar, editar y eliminar un registro en la tabla",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "passed",
+                  "duration": 58451,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-03-10T13:42:21.181Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\test-results\\tables-Agregar-editar-y-eliminar-un-registro-en-la-tabla-chromium\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2ed17ab8622356e051a3-68a3194f221d564815e8",
+          "file": "tables.test.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "Agregar, editar y eliminar un registro en la tabla",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "status": "passed",
+                  "duration": 17821,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-03-10T13:43:22.868Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\test-results\\tables-Agregar-editar-y-eliminar-un-registro-en-la-tabla-firefox\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2ed17ab8622356e051a3-2cb4df7013009de146a5",
+          "file": "tables.test.ts",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "widgets.test.ts",
+      "file": "widgets.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Interacción con Widgets en DemoQA",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 22303,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-03-10T13:42:37.272Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\test-results\\widgets-Interacción-con-Widgets-en-DemoQA-chromium\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "525a68316d9d9ad66493-c7eb1190345c6665bb7b",
+          "file": "widgets.test.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "Interacción con Widgets en DemoQA",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "status": "passed",
+                  "duration": 33725,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-03-10T13:43:41.687Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\lucim\\Documents\\GitHub\\QA_Automation\\test-results\\widgets-Interacción-con-Widgets-en-DemoQA-firefox\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "525a68316d9d9ad66493-913335859eeee4721bfe",
           "file": "widgets.test.ts",
           "line": 4,
           "column": 5
@@ -252,9 +542,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-03-06T13:14:50.889Z",
-    "duration": 65864.609,
-    "expected": 0,
+    "startTime": "2025-03-10T13:42:20.494Z",
+    "duration": 115993.854,
+    "expected": 7,
     "skipped": 0,
     "unexpected": 3,
     "flaky": 0

@@ -19,29 +19,40 @@ export class WidgetsPage {
         this.toolTipText = page.locator(".tooltip-inner");
     }
 
-    async navigate() {
-        await this.page.goto("/widgets");
+    async navigateToWidgets() {
+        await this.page.goto(`/widgets`);
+    }
+
+    async openWidget(widgetName: string) {
+        const widgetButton = this.page.getByText(widgetName, { exact: true });
+        await widgetButton.scrollIntoViewIfNeeded();
+        await widgetButton.click();
     }
 
     async selectDate(date: string) {
-        await this.page.locator("#datePickerMonthYearInput").click();
-        await this.page.waitForSelector(".react-datepicker", { state: "visible", timeout: 5000 });
+        await this.page.waitForLoadState('domcontentloaded');
+        await this.datePicker.scrollIntoViewIfNeeded();
+        await this.datePicker.click();
+        await this.page.waitForSelector(".react-datepicker", { state: "visible" });
         const [day, month, year] = date.split("/");
         await this.page.locator(".react-datepicker__year-select").selectOption(year);
         await this.page.locator(".react-datepicker__month-select").selectOption((parseInt(month) - 1).toString());
         await this.page.locator(`.react-datepicker__day--${day.padStart(3, "0")}:not(.react-datepicker__day--outside-month)`).click();
     }
-     
+
     async startProgressBar() {
+        await this.startButton.waitFor({ state: "visible" });
         await this.startButton.click();
-        await expect(this.progressBar).toHaveText("100%");
+        await expect(this.progressBar).toHaveText("100%", { timeout: 15000 });
     }
 
     async moveSlider(value: number) {
+        await this.slider.waitFor({ state: "visible" });
         await this.slider.fill(value.toString());
     }
 
     async validateTooltip() {
+        await this.toolTipButton.waitFor({ state: "visible" });
         await this.toolTipButton.hover();
         await expect(this.toolTipText).toBeVisible();
     }

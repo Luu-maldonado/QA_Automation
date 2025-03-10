@@ -7,8 +7,8 @@ test("Agregar, editar y eliminar un registro en la tabla", async ({ page }) => {
     await tablesPage.navigate();
 
     // Agregar nuevo registro
-    await tablesPage.addRecord("Juan", "Pérez", "juanperez@test.com");
+    await tablesPage.addRecord("Juan", "Pérez", "juanperez@test.com", "30", "40000", "QA");
 
     // Validar que el registro fue agregado
-    await tablesPage.validateRecordExists();
+    await tablesPage.validateRecordExists("Juan");
 });
